@@ -1,0 +1,45 @@
+
+<script src='dragon.js'></script>
+...
+<div>
+   <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg> 
+</div>
+<script>
+   DRAGON.fractal('fractal', [100,300], [500,300], 10, false, 700);
+</script>
+...
+
+
+<!doctype html><html><head><meta charset='utf-8'>
+
+<title>Dragon curve in JavaScript</title>
+<!-- dragon specific -->
+<style> 
+   svg#fractal {
+      height: 500px; width: 700px;
+   }
+   svg path.dragon {
+      stroke: #ff0f83;
+      stroke-width: 5;
+   }
+</style> 
+
+</head>
+<body>
+<div class='contentSection'>
+   <div class='contentHeader'> <h1>Dragon curve in JavaScript</h1></div>
+
+   <div>
+      <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg> 
+   </div>
+   
+   <script>
+      try {
+         DRAGON.fractal('fractal', [100,300], [500,300], 2, false, 700);
+      } catch (e) {
+         alert(e.name + ': ' + e.type + ': ' + e.message);
+      }
+   </script>
+
+</body>
+</html>
